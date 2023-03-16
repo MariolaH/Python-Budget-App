@@ -39,9 +39,12 @@ CLASS
             - amount
             - description
                 -none give: default to '' (empty string)
+                    -(self, amount, description='')
             - append an object to the ledger list in form:
-                - {"amount": amount, "description": description}    
-
+                - {"amount": amount, "description": description}
+                    ledger.append({"amount": amount, "description": description})
+                        list_name.append(element)
+    
 
         2. WITHDRAW
             -amount
