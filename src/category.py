@@ -26,12 +26,14 @@ class Category:
 
 # transfer from 1 category to another
     def transfer(self,amount, category):
-        if self.check_funds(amount):
-            self.withdraw(amount, "Transfer to " + self.name)
-            self.deposit(amount, "Transfer from " + self.name)
-            return True
-        else:
-            return False
+        # if self.check_funds(amount):
+        self.withdraw(amount, "Transfer to " + category.name)
+        return True
+        category.deposit(amount, "Transfer from " + self.name)
+        return False
+            # self.withdraw(amount, "Transfer to " + self.name)
+            # self.deposit(amount, "Transfer from " + self.name)
+        # else:
  
     def check_funds(self, amount):
         if self.balance >= amount:
@@ -64,11 +66,11 @@ initial_deposit.deposit(1000, 'Deposit')
 initial_deposit.withdraw(10.15, 'food')
 initial_deposit.withdraw(50.00, 'clothing')
 initial_deposit.withdraw(15.89, 'entertainment')
-initial_deposit.withdraw(75, 'food')
+initial_deposit.withdraw(5, 'food')
 
 # transfer
 
-initial_deposit.transfer(75, clothing)
+initial_deposit.transfer(105, clothing)
 
 print(initial_deposit)
 
