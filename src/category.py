@@ -44,11 +44,13 @@ class Category:
 
 
     def __str__(self):
-        print(f"""********** {self.name} ********""")
+        print('\v')
+        print(f"{'*' * 10}{self.name}{'*' * 10}" '\v')
         for item in self.ledger:
             print(f"{item['description']} :  $ {item['amount']}")
-        return f'TOTAL: $ {self.balance}'
+        return f'TOTAL: {self.balance}'
 
+# print(f"{x['description']:<22} {x['amount']:>10}")
 
 # CATERGORIES (name)
 initial_deposit = Category('BUDGET')
@@ -62,11 +64,10 @@ initial_deposit.deposit(1000, 'Deposit')
 
 # withdraw
 
-initial_deposit.withdraw(10.15, 'Food')
-initial_deposit.withdraw(50.00, 'Clothing')
-initial_deposit.withdraw(15.89, 'Entertainment')
-initial_deposit.withdraw(5, 'Food')
-initial_deposit.withdraw(55, 'Gas')
+initial_deposit.withdraw(10.15, 'food')
+initial_deposit.withdraw(50.00, 'clothing')
+initial_deposit.withdraw(15.89, 'entertainment')
+initial_deposit.withdraw(75, 'food')
 
 # transfer
 
