@@ -50,13 +50,6 @@ class Category:
             print(f"{item['description']: <22}  $ {item['amount']:8.2f}" '\v')
         return f'TOTAL: {"$" :>18}{self.balance:9.2f}'
 
-    # def __str__(self):
-    #     print('\v')
-    #     print(f"{'*' * 10}{self.name}{'*' * 10}" '\v')
-    #     for item in self.ledger:
-    #         print(f"{item['description']: <15}  $ {item['amount']:8.2f}" '\v')
-    #     return f'TOTAL: {"$" :>11}{self.balance:9.2f}'
-
 # CATERGORIES (name)
 initial_deposit = Category('B U D G E T')
 Food = Category('Food')
