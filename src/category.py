@@ -47,9 +47,8 @@ class Category:
         print('\v')
         print(f"{'*' * 10}{self.name}{'*' * 10}" '\v')
         for item in self.ledger:
-            print(f"{item['description']} :  $ {item['amount']}")
-        return f'TOTAL: {self.balance}'
-# print(f"{x['description']:<22} {x['amount']:>10}")
+            print(f"{item['description']: <15}  $ {item['amount']:8.2f}" '\v')
+        return f'TOTAL: {"$" :>11}{self.balance:9.2f}'
 
 # CATERGORIES (name)
 initial_deposit = Category('BUDGET')
