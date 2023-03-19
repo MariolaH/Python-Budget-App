@@ -43,15 +43,22 @@ class Category:
             return True  
 
 
-     def __str__(self):
+    def __str__(self):
         print('\v')
-        print(f"{'*' * 10}{self.name}{'*' * 10}" '\v')
+        print(f"{'*' * 11} {self.name} {'*' * 11}" '\v')
         for item in self.ledger:
-            print(f"{item['description']: <15}  $ {item['amount']:8.2f}" '\v')
-        return f'TOTAL: {"$" :>11}{self.balance:9.2f}'
+            print(f"{item['description']: <22}  $ {item['amount']:8.2f}" '\v')
+        return f'TOTAL: {"$" :>18}{self.balance:9.2f}'
+
+    # def __str__(self):
+    #     print('\v')
+    #     print(f"{'*' * 10}{self.name}{'*' * 10}" '\v')
+    #     for item in self.ledger:
+    #         print(f"{item['description']: <15}  $ {item['amount']:8.2f}" '\v')
+    #     return f'TOTAL: {"$" :>11}{self.balance:9.2f}'
 
 # CATERGORIES (name)
-initial_deposit = Category('BUDGET')
+initial_deposit = Category('B U D G E T')
 Food = Category('Food')
 Clothing = Category('Clothing')
 Entertainment = Category('Entertainment')
@@ -62,10 +69,10 @@ initial_deposit.deposit(1000, 'Deposit')
 
 # withdraw
 
-initial_deposit.withdraw(10.15, 'food')
-initial_deposit.withdraw(50.00, 'clothing')
-initial_deposit.withdraw(15.89, 'entertainment')
-initial_deposit.withdraw(75, 'food')
+initial_deposit.withdraw(10.15, 'Food')
+initial_deposit.withdraw(50.00, 'Clothing')
+initial_deposit.withdraw(15.89, 'Entertainment')
+initial_deposit.withdraw(75, 'Food')
 
 # transfer
 
