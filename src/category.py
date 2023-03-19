@@ -43,9 +43,10 @@ class Category:
 
 
     def __str__(self):
-        print(f"""********** {self.name} ********""")
+        print('\v')
+        print(f"{'*' * 10}{self.name}{'*' * 10}" '\v')
         for item in self.ledger:
-            print(f"{item['description']: <15}  $ {item['amount']:8.2f}")
+            print(f"{item['description']: <15}  $ {item['amount']:8.2f}" '\v')
         return f'TOTAL: {"$" :>11}{self.balance:9.2f}'
 
 # print(f"{x['description']:<22} {x['amount']:>10}")
