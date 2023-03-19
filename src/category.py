@@ -43,13 +43,12 @@ class Category:
             return True  
 
 
-    def __str__(self):
+     def __str__(self):
         print('\v')
         print(f"{'*' * 10}{self.name}{'*' * 10}" '\v')
         for item in self.ledger:
             print(f"{item['description']} :  $ {item['amount']}")
         return f'TOTAL: {self.balance}'
-
 # print(f"{x['description']:<22} {x['amount']:>10}")
 
 # CATERGORIES (name)
